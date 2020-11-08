@@ -2,9 +2,7 @@ import Airtable from 'airtable';
 import m from 'moment';
 import 'moment/locale/ca';
 
-const apiKey = "keyJx8PJSXYLOK7Vu";
-
-Airtable.configure({ apiKey });
+Airtable.configure({ apiKey: process.env.AIRTABLE_KEY });
 
 export default async city => {
     const base = Airtable.base("appY1KSidJT2goPzb");

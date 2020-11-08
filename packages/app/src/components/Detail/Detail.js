@@ -11,8 +11,6 @@ const icons = {
     "mapa": mapIcon
 };
 
-const key = "AIzaSyC0EFtzZRMNgXcU6LKLFqOwMPF1QMe7EfY";
-
 const Media = props =>
     <div className={`detail__media ${props.tipus}`}>
         <a href={props.url} target="_BLANK">
@@ -46,7 +44,7 @@ export default class Detail extends React.Component {
 
     componentDidMount() {
         window.google.load("maps", "3", {
-            other_params:`key=${key}`, 
+            other_params:`key=${process.env.GOOGLEMAPS_KEY}`, 
             callback: () => {
                 const map = new window.google.maps.Map(document.getElementById('street-view'), {
                     center: this.props.coords,

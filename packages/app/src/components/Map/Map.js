@@ -4,8 +4,6 @@ import GoogleMapReact from 'google-map-react';
 import Pin from './Pin';
 import './Map.css';
 
-const key = "AIzaSyC0EFtzZRMNgXcU6LKLFqOwMPF1QMe7EfY";
-
 export default class Map extends Component {
     createMarkers = () =>
         this.props.pins && this.props.pins.length 
@@ -25,7 +23,7 @@ export default class Map extends Component {
         return (
             <div className="map">
                 <GoogleMapReact
-                    bootstrapURLKeys={{ key }}
+                    bootstrapURLKeys={{ key: process.env.GOOGLEMAPS_KEY }}
                     center={center}
                     zoom={zoom}
                     defaultCenter={{lat: 0, lng: 0}}
