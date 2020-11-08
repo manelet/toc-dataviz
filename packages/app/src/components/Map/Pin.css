@@ -1,0 +1,13 @@
+.pin {
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  background-color: #3277B1;
+  border: 1px solid white;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  transition: all .1s ease-in;
+  cursor: pointer; }
+  .pin:hover {
+    transform: scale(1.4); }
+  .pin.is-hovered {
+    transform: scale(1.4); }

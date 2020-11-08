@@ -1,0 +1,24 @@
+.loading {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: #76a6cd;
+    color: #4c83ad;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        text-shadow: 0 1px 1px white;
+    }
+
+    p.localmaps, p.localmaps strong {
+        color: inherit;
+        font-size: 3rem;
+    }
+    
+    img {
+        width: 125px;
+        margin-top: 5em;
+    }
+}

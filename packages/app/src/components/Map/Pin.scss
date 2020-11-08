@@ -1,0 +1,22 @@
+$bgColor: #3277B1;
+$size: 14px;
+$sizeHover: 18px;
+
+.pin {
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    background-color: $bgColor;
+    border: 1px solid white;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+    transition: all .1s ease-in;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.4);
+    }
+
+    &.is-hovered {
+        transform: scale(1.4);        
+    }
+}

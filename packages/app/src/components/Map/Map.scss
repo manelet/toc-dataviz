@@ -1,0 +1,19 @@
+@import '../../vars.scss';
+
+.map {
+    height: calc(100vh - 52px);
+    width: 100%;
+    // position: fixed;
+    // left: -1000px;
+
+    &.is-active {
+        position: fixed;
+        left: auto;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: calc(100% - 50vw);
+        position: fixed;
+        left: auto;
+    }
+}

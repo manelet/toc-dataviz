@@ -1,0 +1,11 @@
+.map {
+  height: calc(100vh - 52px);
+  width: 100%; }
+  .map.is-active {
+    position: fixed;
+    left: auto; }
+  @media screen and (min-width: 769px) {
+    .map {
+      width: calc(100% - 50vw);
+      position: fixed;
+      left: auto; } }

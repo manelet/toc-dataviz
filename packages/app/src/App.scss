@@ -1,0 +1,72 @@
+@import 'Fonts.css';
+@import './vars.scss';
+
+body {
+    font-family: 'Circular Book';
+}
+
+.localmaps {
+    color: #76a6cd;
+    letter-spacing: -2px;
+    font-size: 1.5rem;
+}
+
+.toggle-map {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li a {
+        background-color: white;
+    }
+}
+
+.app-wrapper {
+    display: flex;
+
+    .left-panel {
+        width: 100vw;
+        min-height: calc(100vh - 52px);
+        transform: translateX(-100vw);
+        transition: transform .65s ease;
+
+        &.is-visible {
+            transform: translateX(0px);
+        }
+
+        @media screen and (min-width: $tablet) {
+            width: 50vw;
+        }
+    }
+
+    .right-panel {
+        width: 100vw;
+        min-height: calc(100vh - 52px);
+        transform: translateX(100vw);
+        transition: transform .65s ease;
+        position: fixed;
+
+        &.is-visible {
+            transform: translateX(0px);
+        }
+
+        @media screen and (min-width: $tablet) {
+            width: 50vw;
+            display: flex;
+            transform: none;
+            position: relative;
+        }
+    }
+}
+
+ul.inline-list {
+    li {
+        float: left;
+        margin-right: 5px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
